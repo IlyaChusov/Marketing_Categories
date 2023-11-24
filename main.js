@@ -58,60 +58,7 @@ $('.upload_button').click(function (e) {
     let fict_formData = new FormData();
     fict_formData.append('values', JSON.stringify(out_array));
 
-    $.ajax({
-        url: 'main_script.php',
-        type: 'POST',
-        data: fict_formData,
-        processData: false,
-        contentType: false,
-        cache: false,
-        success: function (data) {
-            console.log(data);
-            data = JSON.parse(data);
-            let tr = document.createElement('tr');
-            let td1 = getTd();
-            let date = new Date(data['time']);
-            td1.textContent = date.toString().split('GMT')[0];
-            // td1.textContent = date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds() + "\n" + date.getDate() + ':' + date.getMonth() + ':' + date.getFullYear();
-            let td2 = getTd();
-            td2.textContent = data['categories'];
-            let td3 = getTd();
-            td3.textContent = data['last_news'];
-            let td4 = getTd();
-            let download_button = document.createElement('button');
-            download_button.classList.add('btn', 'waves-effect', 'waves-light');
-            let i = document.createElement('i');
-            i.classList.add('material-icons', 'center');
-            i.textContent = 'arrow_downward';
-            download_button.append(i);
-            td4.append(download_button);
-
-            let td5 = getTd();
-            let delete_button = document.createElement('button');
-            delete_button.classList.add('btn', 'waves-effect', 'waves-light');
-            let i2 = document.createElement('i');
-            i2.classList.add('material-icons', 'center');
-            i2.textContent = 'delete';
-            delete_button.append(i2);
-            td5.append(delete_button);
-
-            tr.append(td1);
-            tr.append(td2);
-            tr.append(td3);
-            tr.append(td4);
-            tr.append(td5);
-
-            table_body.append(tr);
-
-            msg.textContent = data['news'] + "\n           " + data['answer'];
-
-            $('.progress').addClass('hidden');
-            clearTimeout(updating_timer);
-            $('.upload_text').text('Запросить');
-            $('.upload_icon').text('arrow_upward');
-
-        }
-    });
+   
 });
 
 const all_categories = {
@@ -182,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         setUpdateTrigger(input.id);
-       
+        $('#' + input.id).click();
         curI++;
     }
     let elems = document.querySelectorAll('select');
