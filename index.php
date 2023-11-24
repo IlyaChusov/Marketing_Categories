@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>Новостной парсер Arena</title>
     <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
-    <link type="text/css" rel="stylesheet" href="../assets/libraries/materialize.css">
-    <link type="text/css" rel="stylesheet" href="assets/css/main.css">
+    <link type="text/css" rel="stylesheet" href="https://raw.githubusercontent.com/IlyaChusov/Marketing_Categories/main/materialize.css">
+    <link type="text/css" rel="stylesheet" href="https://raw.githubusercontent.com/IlyaChusov/Marketing_Categories/main/main.css">
 
 
 </head>
@@ -31,9 +31,9 @@
     </div>
 </div>
 
-<script type="text/javascript" src="../assets/libraries/jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="../assets/libraries/materialize.js"></script>
-<script type="text/javascript" src="assets/js/main.js"></script>
+<!-- <script type="text/javascript" src="../assets/libraries/jquery-3.6.0.min.js"></script> -->
+<script type="text/javascript" src="https://raw.githubusercontent.com/IlyaChusov/Marketing_Categories/main/materialize.js"></script>
+<script type="text/javascript" src="https://raw.githubusercontent.com/IlyaChusov/Marketing_Categories/main/main.js"></script>
 
 </body>
 </html>
