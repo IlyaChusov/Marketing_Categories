@@ -182,14 +182,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         setUpdateTrigger(input.id);
-        if (categoryName !== 'Спонсорство и спецпроекты' &&
-            categoryName !== 'Технологии и нейросети' &&
-            categoryName !== 'Исследования в маркетинге' &&
-            categoryName !== 'Агентства' &&
-            categoryName !== 'Тендеры' &&
-            categoryName !== 'Кадры и назначения' &&
-            categoryName !== 'e-commerce')
-            $('#' + input.id).click();
+       
         curI++;
     }
     let elems = document.querySelectorAll('select');
