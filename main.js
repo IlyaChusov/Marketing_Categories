@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 // option.className = 'option_subcategory';
                 option.value = categoryName + ';' + subcategory;
                 option.text = subcategory;
-                option.selected = true;
+                // option.selected = true;
                 // option.classList.add('option' + curI);
                 select.append(option);
             }
