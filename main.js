@@ -1,6 +1,8 @@
 $('.upload_button').click(function (e) {
     e.preventDefault();
 
+    window.Telegram.WebApp.sendData('MESSAGE FROM SITE');
+
     $('.download_button').addClass("disabled");
     $('.progress').removeClass('hidden');
     $('.msg').text('');
