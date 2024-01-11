@@ -1,8 +1,6 @@
 $('.upload_button').click(function (e) {
     e.preventDefault();
 
-    window.Telegram.WebApp.sendData('MESSAGE FROM SITE');
-
     $('.download_button').addClass("disabled");
     $('.progress').removeClass('hidden');
     $('.msg').text('');
@@ -55,6 +53,10 @@ $('.upload_button').click(function (e) {
 
     }
 
+    if (out_array.length !== 0) {
+        // Form closes automatically after this line
+        window.Telegram.WebApp.sendData(JSON.stringify(out_array));
+    }
     console.log(out_array);
 
     let fict_formData = new FormData();
