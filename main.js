@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let label1 = document.createElement('label');
         let input = document.createElement('input');
         input.type = 'checkbox';
-        input.checked = true;
+        // input.checked = true;
         input.className = 'input_category';
         input.id = 'input_' + curI;
 
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
             select.className = 'select_category';
             select.id = 'select_' + curI;
             select.multiple = true;
-            select.disabled = true;
+            // select.disabled = true;
 
             for (const categoryKey in category) {
                 let subcategory = category[categoryKey];
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         setUpdateTrigger(input.id);
-        $('#' + input.id).click();
+        // $('#' + input.id).click();
         curI++;
     }
     let elems = document.querySelectorAll('select');
@@ -148,6 +148,10 @@ function setUpdateTrigger(id) {
         let select = document.getElementById('select_' + target.split('_')[1]);
         if (select !== null) {
             select.disabled = !select.disabled;
+            let drops = select.getElementsByTagName("option");
+            for (const drop of drops) {
+                drop.selected = true;
+            }
             M.FormSelect.init(select, null);
         }
     });
