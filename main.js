@@ -31,7 +31,7 @@ $('.upload_button').click(function (e) {
     let selects = document.getElementsByClassName('select_category');
     for (const key in selects) {
         let select = selects[key];
-        if (!select.disabled) {
+        // if (!select.disabled) {
             let model = M.FormSelect.getInstance(select);
             if (model !== null && model !== undefined) {
                 let selected = model.getSelectedValues();
@@ -49,7 +49,7 @@ $('.upload_button').click(function (e) {
                 }
             }
 
-        }
+        // }
 
     }
 
