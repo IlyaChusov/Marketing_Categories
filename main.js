@@ -1,24 +1,6 @@
 $('.upload_button').click(function (e) {
     e.preventDefault();
 
-    $('.download_button').addClass("disabled");
-    $('.progress').removeClass('hidden');
-    $('.msg').text('');
-
-    $('.upload_icon').text('');
-    $('.upload_text').text('Обработка');
-    let updating_text = ['Обработка.', 'Обработка..', 'Обработка...', 'Обработка'];
-    let i = 0;
-    let delay = 1000;
-    let updating_timer = setTimeout(function update() {
-        if (i === updating_text.length)
-            i = 0;
-        $('.upload_text').text(updating_text[i]);
-        i++;
-
-        updating_timer = setTimeout(update, delay);
-    }, delay);
-
     let out_array = {};
 
     let inputs = document.getElementsByClassName('input_category');
@@ -53,16 +35,10 @@ $('.upload_button').click(function (e) {
 
     }
 
-    if (out_array.length !== 0) {
+    if (Reflect.ownKeys(out_array).length !== 0) {
         // Form closes automatically after this line
         window.Telegram.WebApp.sendData(JSON.stringify(out_array));
     }
-    console.log(out_array);
-
-    let fict_formData = new FormData();
-    fict_formData.append('values', JSON.stringify(out_array));
-
-   
 });
 
 const all_categories = {
