@@ -5,19 +5,17 @@ input {
 
 label {
     display: block;
+    color: black;
     margin-bottom: 10px;
 }
 
 .all {
+    font-family: CustomSerif, Georgia, Cambria, 'Times New Roman', serif;
     display: table;
     height: 100%;
     position: absolute;
     overflow: hidden;
     width: 100%;
-}
-
-body {
-    background-color: #E6FFCC;
 }
 
 .center_block {
