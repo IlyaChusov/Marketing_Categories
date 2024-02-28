@@ -9,6 +9,10 @@ label {
     margin-bottom: 10px;
 }
 
+body {
+    background-color: white;
+}
+
 .all {
     font-family: CustomSerif, Georgia, Cambria, 'Times New Roman', serif;
     display: table;
