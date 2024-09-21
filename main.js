@@ -42,7 +42,7 @@ $('.upload_button').click(function (e) {
 });
 
 const all_categories = {
-    'Digital-площадки': [],
+    'Digital': [],
     'E-com': [],
     'OOH': [],
     'Агентства': [],
